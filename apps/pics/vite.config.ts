@@ -4,11 +4,15 @@ import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/modern-react',
+  cacheDir: '../../node_modules/.vite/pics',
 
   server: {
     port: 4200,
     host: 'localhost',
+    fs: {
+      // Allow serving files from one level up to the project root
+      allow: ['..'],
+    },
   },
 
   preview: {

@@ -1,7 +1,7 @@
 {
-  "name": "modern-react",
+  "name": "animals",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/modern-react/src",
+  "sourceRoot": "apps/animals/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/modern-react"
+        "outputPath": "dist/apps/animals"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "modern-react:build"
+        "buildTarget": "animals:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "modern-react:build:development",
+          "buildTarget": "animals:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "modern-react:build:production",
+          "buildTarget": "animals:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "modern-react:build"
+        "buildTarget": "animals:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "modern-react:build:development"
+          "buildTarget": "animals:build:development"
         },
         "production": {
-          "buildTarget": "modern-react:build:production"
+          "buildTarget": "animals:build:production"
         }
       }
     },
@@ -57,14 +57,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/modern-react"
+        "reportsDirectory": "../../coverage/apps/animals"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/modern-react/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/animals/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
