@@ -1,27 +1,25 @@
 import {Book} from "../types/Book.type";
 import {useState} from "react";
 import {BookEdit} from "./BookEdit";
+import {useBooksContext} from "../hooks/use-books-context";
 
 interface BookShowProps {
   book: Book;
-  onDelete: (id:number) => void;
-  onEdit:(id:number, title:string) => void;
 }
 
-export const BookShow = ({book, onDelete, onEdit}:BookShowProps) => {
+export const BookShow = ({book}:BookShowProps) => {
   const [showEdit, setShowEdit] = useState<boolean>(false);
-
-  const handleDeleteClick = () => {
-    onDelete(book.id);
+ const { deleteBookById } = useBooksContext();
+  const handleDeleteClick = async () => {
+    await deleteBookById(book.id);
   }
 
   const handleEditClick = () => {
     setShowEdit(!showEdit);
   }
 
-  const handleSubmit = (id: number, title: string) => {
+  const handleSubmit = async () => {
     setShowEdit(false);
-    onEdit(id, title);
   }
 
   const content = showEdit ? <BookEdit book={book} onSubmit={handleSubmit}/>: <h3>{book.title}</h3>;
