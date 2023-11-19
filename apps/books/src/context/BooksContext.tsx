@@ -1,4 +1,4 @@
-import {createContext, PropsWithChildren, useState} from 'react';
+import {createContext, PropsWithChildren, useCallback, useState} from 'react';
 import { Book } from '../types/Book.type';
 import axios from 'axios';
 
@@ -15,10 +15,10 @@ export const BooksContext = createContext<BooksContextType | undefined>(undefine
 export const Provider = ({ children }: PropsWithChildren) => {
   const [books, setBooks] = useState<Book[]>([]);
 
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     const { data } = await axios.get('http://localhost:3001/books');
     setBooks(data);
-  };
+  },[]);
 
   const createBook = async (title: string): Promise<void> => {
     const { data } = await axios.post('http://localhost:3001/books', {

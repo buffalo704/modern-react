@@ -8,7 +8,7 @@ export function App() {
 
   useEffect(() => {
     fetchBooks();
-  },[]);
+  },[fetchBooks]);
 
 
   return (
