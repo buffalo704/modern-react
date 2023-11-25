@@ -14,6 +14,7 @@ export interface TableConfig {
     fruit: T
   ) => TableData[keyof TableData] | ReactElement;
   sortValue?: <T extends TableData>(fruit: T) => TableData[keyof TableData];
+  header?: () => ReactElement;
 }
 
 export const TablePage = () => {

@@ -1,7 +1,7 @@
 import { Table } from './Table';
 import { TableConfig, TableData } from '../pages/TablePage';
 import { useState } from 'react';
-import { GoArrowBoth, GoArrowDown, GoArrowUp } from 'react-icons/go';
+import { GoArrowDown, GoArrowUp } from 'react-icons/go';
 
 interface SortableTableProps {
   data: TableData[];
