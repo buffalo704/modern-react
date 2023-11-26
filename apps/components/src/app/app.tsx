@@ -1,15 +1,16 @@
-import {AccordionPage} from "../pages/AccordionPage";
-import {Route} from "../components/Route";
-import {DropdownPage} from "../pages/DropdownPage";
-import {Sidebar} from "../components/Sidebar";
-import {ButtonPage} from "../pages/ButtonPage";
-import {ModalPage} from "../pages/ModalPage";
-import {TablePage} from "../pages/TablePage";
+import { AccordionPage } from '../pages/AccordionPage';
+import { Route } from '../components/Route';
+import { DropdownPage } from '../pages/DropdownPage';
+import { Sidebar } from '../components/Sidebar';
+import { ButtonPage } from '../pages/ButtonPage';
+import { ModalPage } from '../pages/ModalPage';
+import { TablePage } from '../pages/TablePage';
+import { CounterPage } from '../pages/CounterPage';
 
 export function App() {
   return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
-     <Sidebar/>
+      <Sidebar />
       <div className="col-span-5">
         <Route path={'/accordion'}>
           <AccordionPage />
@@ -19,6 +20,9 @@ export function App() {
         </Route>
         <Route path={'/buttons'}>
           <ButtonPage />
+        </Route>
+        <Route path={'/counter'}>
+          <CounterPage initialCount={5} />
         </Route>
         <Route path={'/modal'}>
           <ModalPage />
