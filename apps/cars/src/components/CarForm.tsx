@@ -1,10 +1,11 @@
 import React, { ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeCost, changeName, addCar } from '../store';
+import {RootState} from "../types";
 
 export const CarForm = () => {
   const dispatch = useDispatch();
-  const { name, cost } = useSelector((state: any) => state.form);
+  const { name, cost } = useSelector((state: RootState) => state.form);
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     dispatch(changeName(event.target.value));
