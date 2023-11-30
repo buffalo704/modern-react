@@ -7,11 +7,5 @@
     "start:mock": "wiremock --root-dir ./mock --enable-stub-cors --global-response-templating"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.6.2"
-  },
-  "devDependencies": {
-    "wiremock": "^3.3.1"
-  }
+  "license": "ISC"
 }

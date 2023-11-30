@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Edith Murphy",
+      "id": 2
+    },
+    {
+      "name": "Myron Jacobi",
+      "id": 3
+    },
+    {
+      "name": "Troy Dibbert",
+      "id": 5
+    },
+    {
+      "name": "Mr. Loren Osinski",
+      "id": 6
+    },
+    {
+      "name": "Derrick Stokes-Ortiz",
+      "id": 8
+    },
+    {
+      "name": "Nellie Ortiz",
+      "id": 10
+    }
+  ],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking Trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Small Frozen Pizza",
+      "id": 11
+    },
+    {
+      "userId": 5,
+      "title": "Licensed Fresh Soap",
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "title": "Handmade Soft Chips",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "title": "Small Concrete Fish",
+      "id": 15
+    },
+    {
+      "userId": 10,
+      "title": "Licensed Steel Chicken",
+      "id": 16
+    },
+    {
+      "userId": 3,
+      "title": "Bespoke Rubber Pizza",
+      "id": 17
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 17,
+      "url": "https://picsum.photos/seed/IyieKru0KN/150/150",
+      "id": 1
+    },
+    {
+      "albumId": 17,
+      "url": "https://picsum.photos/seed/ReUTyFKmXW/150/150",
+      "id": 2
+    },
+    {
+      "albumId": 17,
+      "url": "https://picsum.photos/seed/wbKPe/150/150",
+      "id": 3
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150?lock=7889257899229184",
+      "id": 4
+    },
+    {
+      "albumId": 17,
+      "url": "https://picsum.photos/seed/Hmm2qJ/150/150",
+      "id": 5
+    }
+  ]
+}
