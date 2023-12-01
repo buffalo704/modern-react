@@ -1,5 +1,5 @@
 import {Button} from "../components/Button";
-import {GoBell, GoCloud, GoDatabase} from "react-icons/go";
+import {GoBell, GoAlert, GoDatabase} from "react-icons/go";
 
 export const ButtonPage = () => {
   return ( <div>
@@ -11,7 +11,7 @@ export const ButtonPage = () => {
     </div>
     <div>
       <Button danger outline>
-        <GoCloud/>
+        <GoAlert/>
         Buy Now!
       </Button>
     </div>
